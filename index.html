@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+
+</body>
+<script>
+    const box = document.querySelector('#box');
+    document.addEventListener('keydown', (event) => {
+        const step = 10;
+        let left = 0;
+
+        if (event.key === 'ArrowLeft') {
+            box.style.left = (left - step) + 'px';
+        } else if (event.key === 'ArrowRight') {
+            box.style.left = (left + step) + 'px';
+        }
+    });
+</script>
+</html>
